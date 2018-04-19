@@ -1,25 +1,32 @@
 package chain;
 
+/**
+ * 责任链处理元素抽象类
+ */
 public abstract class AbstractLogger {
-    private LoggerLever lever;
+    protected LoggerLever lever;
 
-    private AbstractLogger nextLogger;
+    protected AbstractLogger nextLogger;
 
-    public void logMessage(LoggerLever lever, String msg) {
-        if (this.lever.equals(lever)) {
-            writeMsg(msg);
-        } else {
-            nextLogger.logMessage(lever, msg);
-        }
-
+    public AbstractLogger() {
     }
-
-    public abstract void writeMsg(String msg);
 
     public AbstractLogger(LoggerLever lever, AbstractLogger nextLogger) {
         this.lever = lever;
         this.nextLogger = nextLogger;
     }
+
+    public void logMessage(Context context) {
+        if (this.lever.equals(context.getLever())) {
+            writeMsg(context.getMsg());
+        } else if (nextLogger != null) {
+            nextLogger.logMessage(context);
+        }
+    }
+
+    public abstract void writeMsg(String msg);
+
+
 
     public LoggerLever getLever() {
         return lever;

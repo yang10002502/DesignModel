@@ -1,9 +1,13 @@
 package chain;
 
+/**
+ * 日志等级
+ */
 public enum LoggerLever {
     INFO("info",1),
     WARNING("warning",2),
     ERROR("error",3),
+    DEFAULT("default",4),
     ;
 
     LoggerLever(String name, Integer index) {
