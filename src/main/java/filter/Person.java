@@ -34,4 +34,13 @@ public class Person {
     public void setMaritalStatus(Integer maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", gender=" + SexConstant.getName(gender) +
+                ", maritalStatus=" + MarriageConstant.getName(maritalStatus) +
+                '}';
+    }
 }

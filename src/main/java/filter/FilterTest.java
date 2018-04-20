@@ -24,24 +24,16 @@ public class FilterTest {
         CriteriaMarried criteriaMarried = new CriteriaMarried();
 
         System.out.println("Males: ");
-        printPersons(criteriaMale.meetCriteria(persons));
+        System.out.println(criteriaMale.meetCriteria(persons));
 
         System.out.println("\nFemales: ");
-        printPersons(criteriaFemale.meetCriteria(persons));
+        System.out.println(criteriaFemale.meetCriteria(persons));
 
         System.out.println("\nSingle: ");
-        printPersons(criteriaSingle.meetCriteria(persons));
+        System.out.println(criteriaSingle.meetCriteria(persons));
 
         System.out.println("\nMarried: ");
-        printPersons(criteriaMarried.meetCriteria(persons));
-    }
+        System.out.println(criteriaMarried.meetCriteria(persons));
 
-    public static void printPersons(List<Person> persons){
-        for (Person person : persons) {
-            System.out.println("Person : [ Name : " + person.getName()
-                    +", Gender : " + SexConstant.getName(person.getGender())
-                    +", Marital Status : " + MarriageConstant.getName(person.getMaritalStatus())
-                    +" ]");
-        }
     }
 }
