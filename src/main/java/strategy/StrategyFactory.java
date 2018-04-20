@@ -1,4 +1,4 @@
-package Strategy;
+package strategy;
 
 /**
  * 策略工厂，根据context选择合适的策略返回

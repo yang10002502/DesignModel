@@ -1,4 +1,4 @@
-package Strategy;
+package strategy;
 
 /**
  * 具体的策略实体ModelTwoStrategy

@@ -1,4 +1,4 @@
-package Strategy;
+package strategy;
 
 /**
  * 测试类
