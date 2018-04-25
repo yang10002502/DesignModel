@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 /**
  * 观察者模式测试用例
  */
-public class ObserverDemo {
+public class ObserverTest {
 
     @Test
     public void registerTest(){
